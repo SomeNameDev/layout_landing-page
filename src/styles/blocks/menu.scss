@@ -8,39 +8,36 @@
   font-weight: 700;
   text-transform: uppercase;
 
+  &__top {
+    margin-bottom: 32px;
+  }
 
-&__top {
-  margin-bottom: 32px;
+  &__nav {
+    margin-bottom: 40px;
+  }
+
+  &__content {
+    @include contentPaddingInline;
+  }
+
+  &__phone-number {
+    color: #1d1d1d;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    line-height: 27px;
+    margin-bottom: 16px;
+  }
+
+  &__book-a-test-ride {
+    color: #1d1d1d;
+    text-decoration: none;
+    display: block;
+    width: fit-content;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 2px;
+    padding-bottom: 8px;
+    border-bottom: 1px solid #1d1d1d;
+  }
 }
-
-&__nav {
-  margin-bottom: 40px;
-}
-
-&__content {
-  @include contentPaddingInline;
-}
-
-&__phone-number {
-  color: #1d1d1d;
-  text-decoration: none;
-  display: block;
-  font-size: 16px;
-  line-height: 27px;
-  margin-bottom: 16px;
-}
-
-&__book-a-test-ride {
-  color: #1d1d1d;
-  text-decoration: none;
-  display: block;
-  width: fit-content;
-  font-size: 12px;
-  line-height: 16px;
-  letter-spacing: 2px;
-  padding-bottom: 8px;
-  border-bottom: 1px solid #1d1d1d;
-}
-}
-
-

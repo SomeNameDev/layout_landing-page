@@ -1,8 +1,7 @@
 @mixin onTablet {
-    @media (min-width: 576px) {
-  @content;
-}
-
+  @media (min-width: 576px) {
+    @content;
+  }
 }
 @mixin contentPaddingInline() {
   padding-inline: 20px;

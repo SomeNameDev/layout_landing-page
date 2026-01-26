@@ -1,26 +1,30 @@
 .icon {
   display: block;
-  margin: 0;
-  height: 24px;
+
   width: 24px;
+  height: 24px;
+  margin: 0;
+
   background-size: cover;
 
+
+
   @include onTablet {
-    height: 32px;
     width: 32px;
+    height: 32px;
   }
 
   &--phone {
-    background-image: url(../../icons/icon--phone.png);
+    background-image: url(../icons/icon--phone.png);
   }
 
   &--menu {
-    background-image: url(../../icons/icon-burger-menu.png);
+    background-image: url(../icons/icon-burger-menu.png);
   }
 
   &--close {
-    background-image: url(../../icons/icon--close.png);
-    background-position: 0%;
+    background-image: url(../icons/icon--close.png);
     background-repeat: no-repeat;
+    background-position: 0%;
   }
 }

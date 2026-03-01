@@ -1,13 +1,11 @@
 .icon {
   display: block;
-
   width: 24px;
   height: 24px;
   margin: 0;
-
   background-size: cover;
 
-
+  @include hover(transform, scale(1.2));
 
   @include onTablet {
     width: 32px;
@@ -15,11 +13,11 @@
   }
 
   &--phone {
-    background-image: url(../icons/icon--phone.png);
+    background-image: url(../icons/icon--phone.svg);
   }
 
   &--menu {
-    background-image: url(../icons/icon-burger-menu.png);
+    background-image: url(../icons/icon-burger-menu.svg);
   }
 
   &--close {

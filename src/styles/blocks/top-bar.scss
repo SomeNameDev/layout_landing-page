@@ -6,10 +6,6 @@
 
   @include contentPaddingInline;
 
-  @include onTablet {
-    padding-block: 64px;
-  }
-
   &__icons {
     display: flex;
     gap: 32px;

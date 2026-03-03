@@ -1,5 +1,10 @@
 @mixin onTablet {
-  @media (min-width: 576px) {
+  @media (min-width: $tablet-min-width) {
+    @content;
+  }
+}
+@mixin onDesktop {
+  @media (min-width: $desktop-min-width) {
     @content;
   }
 }
@@ -8,6 +13,13 @@
 
   @include onTablet {
     padding-inline: 72px;
+    min-width: 578px;
+  }
+
+  @include onDesktop {
+    padding-inline: 120px;
+    max-width: 1020px;
+    margin-inline: auto;
   }
 }
 

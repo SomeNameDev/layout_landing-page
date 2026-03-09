@@ -2,10 +2,13 @@
   &__photo {
     width: 100%;
   }
-}
-.product__category {
-  color: black;
-}
-.product__price {
-  color: black;
+  &__title {
+    text-align: left;
+  }
+  &__category {
+    color: black;
+  }
+  &__price {
+    color: black;
+  }
 }

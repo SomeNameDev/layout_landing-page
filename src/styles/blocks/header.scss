@@ -1,20 +1,14 @@
 .header {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-
-  box-sizing: border-box;
-  height: 100vh;
-
   background-image: url('../images/header-bg-mobile.png');
   background-position: center;
   background-size: cover;
 
-  // &__top {
-  //   display: flex;
-  //   align-items: center;
-  //   justify-content: space-between;
-  // }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
 
   &__title {
     margin: 0;
@@ -28,8 +22,6 @@
   }
 
   &__bottom {
-    @include contentPaddingInline;
-
     padding-bottom: 40px;
   }
 }

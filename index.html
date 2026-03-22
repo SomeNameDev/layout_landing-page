@@ -222,9 +222,8 @@
             class="details"
             id="details"
           >
-            <div class="details__title-wrapper">
-              <h2 class="details__title section-title">The Details</h2>
-            </div>
+            <h2 class="details__title section-title">The Details</h2>
+
             <div class="details__wrapper">
               <article class="detail">
                 <div class="detail__photos">
@@ -337,7 +336,35 @@
           >
             <div class="container">
               <h2 class="contact__title section-title">Contact us</h2>
-              <div class="contact__content"></div>
+              <div class="contact__content">
+                <form
+                  action="#"
+                  class="contact__form form"
+                >
+                  <input
+                    type="text"
+                    class="form__input"
+                    placeholder="Name"
+                    required
+                  />
+                  <input
+                    type="email"
+                    class="form__input"
+                    placeholder="Email"
+                    required
+                  />
+                  <textarea
+                    class="form__input form__input--textarea"
+                    placeholder="Message"
+                  ></textarea>
+                  <a
+                    href="#"
+                    class="send"
+                  >
+                    send
+                  </a>
+                </form>
+              </div>
             </div>
           </section>
         </div>

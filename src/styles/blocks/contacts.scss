@@ -4,7 +4,64 @@
     margin-bottom: 48px;
   }
   &__content {
-    display: grid;
     @include pageGrid;
+  }
+  &__form {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 16px;
+    @include onTablet {
+      grid-column: span 3;
+    }
+    @include onDesktop {
+      grid-column: span 5;
+    }
+    &__input {
+      width: 100%;
+      padding: 16px 20px;
+      border-radius: 50%;
+    }
+    &__send {
+      display: block;
+      margin-top: 16px;
+      width: 100%;
+      height: 56px;
+      background-color: white;
+      text-decoration: none;
+    }
+  }
+  &__info {
+    grid-column: 1/-1;
+    display: flex;
+    flex-direction: column;
+    row-gap: 24px;
+
+    @include onTablet {
+      grid-column: span 3;
+    }
+    @include onDesktop {
+      grid-column: span 5;
+    }
+    &__item {
+    }
+    &__label {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 1.4;
+      letter-spacing: 0;
+      color: #fff;
+    }
+    &__link {
+    }
+    &__text {
+      font-family: 'Poppins', sans-serif;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.4;
+      letter-spacing: 0;
+      color: #fff;
+    }
   }
 }

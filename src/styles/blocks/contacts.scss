@@ -3,65 +3,77 @@
     text-align: center;
     margin-bottom: 48px;
   }
+
   &__content {
     @include pageGrid;
+    row-gap: 32px;
   }
+
   &__form {
-    grid-column: 1/-1;
-    display: flex;
-    flex-direction: column;
-    row-gap: 16px;
+    grid-column: 1 / -1;
     @include onTablet {
       grid-column: span 3;
     }
     @include onDesktop {
       grid-column: span 5;
     }
-    &__input {
-      width: 100%;
-      padding: 16px 20px;
-      border-radius: 50%;
-    }
-    &__send {
-      display: block;
-      margin-top: 16px;
-      width: 100%;
-      height: 56px;
-      background-color: white;
-      text-decoration: none;
-    }
   }
+
   &__info {
-    grid-column: 1/-1;
+    grid-column: 1 / -1;
     display: flex;
     flex-direction: column;
     row-gap: 24px;
-
     @include onTablet {
       grid-column: span 3;
     }
     @include onDesktop {
-      grid-column: span 5;
-    }
-    &__item {
+      grid-column: 7 / span 5;
     }
     &__label {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 1.4;
-      letter-spacing: 0;
-      color: #fff;
-    }
-    &__link {
     }
     &__text {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 500;
-      font-size: 16px;
-      line-height: 1.4;
-      letter-spacing: 0;
-      color: #fff;
+    }
+  }
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  row-gap: 16px;
+
+  &__input {
+    width: 100%;
+    padding: 16px 20px;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: white;
+    outline: none;
+
+    &--textarea {
+      min-height: 100px;
+      border-radius: 12px;
+    }
+  }
+
+  &__send {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 56px;
+    margin-top: 16px;
+    background-color: white;
+    color: black;
+    text-decoration: none;
+    border-radius: 28px;
+    font-weight: 700;
+    text-transform: uppercase;
+    transition: 0.3s;
+
+    &:hover {
+      background-color: #eee;
     }
   }
 }

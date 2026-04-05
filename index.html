@@ -25,6 +25,12 @@
       rel="stylesheet"
     />
     <link
+      rel="icon"
+      href="./src/icons/Vector.png"
+      type="image/png"
+    />
+
+    <link
       rel="stylesheet"
       href="./src/styles/index.scss"
     />
@@ -35,14 +41,17 @@
   </head>
   <!-- #endregion -->
 
-  <body class="page__body">
+  <body
+    class="page__body"
+    id="home"
+  >
     <!-- #region header -->
     <header class="header">
       <div class="container">
         <div class="header__content">
           <div class="top-bar">
             <a
-              href="#"
+              href="#home"
               class="top-bar__logo"
             >
               <img
@@ -52,9 +61,11 @@
             </a>
             <div class="top-bar__icons">
               <a
-                href="#"
+                href="tel:+12345555555"
                 class="icon icon--phone"
-              ></a>
+              >
+                <span class="phone-number">+1 234 555</span>
+              </a>
               <a
                 href="#menu"
                 class="icon icon--menu"
@@ -77,7 +88,7 @@
       <div class="container">
         <div class="top-bar menu__top">
           <a
-            href="#"
+            href="#home"
             class="top-bar__logo"
           >
             <img
@@ -104,7 +115,7 @@
               <li class="nav__item">
                 <a
                   class="nav__link"
-                  href="#move Free"
+                  href="#move-free"
                 >
                   Move Free
                 </a>
@@ -112,7 +123,7 @@
               <li class="nav__item">
                 <a
                   class="nav__link"
-                  href="#compare Bikes"
+                  href="#compare-bikes"
                 >
                   Compare Bikes
                 </a>
@@ -120,7 +131,7 @@
               <li class="nav__item">
                 <a
                   class="nav__link"
-                  href="#the Details"
+                  href="#details"
                 >
                   The Details
                 </a>
@@ -128,7 +139,7 @@
               <li class="nav__item">
                 <a
                   class="nav__link"
-                  href="#contacts"
+                  href="#contact"
                 >
                   Contacts
                 </a>
@@ -322,7 +333,7 @@
                 <div class="details__btn-wrapper">
                   <a
                     href="#contact"
-                    class="explore-btn"
+                    class="explore-btn btn-action"
                   >
                     Explore
                   </a>
@@ -339,6 +350,8 @@
               <form
                 action="#"
                 class="contact__form form"
+                id="contactForm"
+                novalidate
               >
                 <input
                   type="text"
@@ -356,12 +369,12 @@
                   class="form__input form__input--textarea"
                   placeholder="Message"
                 ></textarea>
-                <a
-                  href="#"
-                  class="form__send"
-                >
-                  send
-                </a>
+
+                <input
+                  type="submit"
+                  class="btn form__send btn-action"
+                  value="send"
+                />
               </form>
               <div class="contact__info info">
                 <div class="info__item">
@@ -386,13 +399,18 @@
 
                 <div class="info__item">
                   <h4 class="info__label">Address</h4>
-                  <p class="info__text">
+                  <a
+                    href="https://www.google.com/maps/search/?api=1&query=400+first+ave+suite+700+Minneapolis+MN+55401"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="info__text info__text--link"
+                  >
                     400 first ave.
                     <br />
                     suite 700
                     <br />
                     Minneapolis, MN 55401
-                  </p>
+                  </a>
                 </div>
               </div>
             </div>
@@ -410,5 +428,14 @@
         alt="footer"
       />
     </footer>
+    <script>
+      document.addEventListener('DOMContentLoaded', () => {
+        const form = document.getElementById('contactForm');
+        form.addEventListener('submit', (e) => {
+          e.preventDefault();
+          form.reset();
+        });
+      });
+    </script>
   </body>
 </html>

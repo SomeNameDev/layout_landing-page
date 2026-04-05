@@ -3,7 +3,7 @@
   width: 24px;
   height: 24px;
   margin: 0;
-  background-size: cover;
+  background-size: contain;
 
   @include hover(transform, scale(1.2));
 
@@ -14,6 +14,14 @@
 
   &--phone {
     background-image: url(../icons/icon--phone.svg);
+    position: relative;
+    display: inline-block;
+    &:-number {
+      opacity: 0;
+    }
+    &:hover {
+      transform: translateX(-100%);
+    }
   }
 
   &--menu {

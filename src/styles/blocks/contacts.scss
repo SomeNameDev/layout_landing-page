@@ -1,4 +1,6 @@
 .contact {
+  margin-bottom: 0;
+  padding-bottom: 0;
   &__title {
     text-align: center;
     margin-bottom: 48px;
@@ -7,6 +9,9 @@
   &__content {
     @include pageGrid;
     row-gap: 32px;
+    @include onTablet {
+      align-items: flex-start;
+    }
   }
 
   &__form {
@@ -24,56 +29,99 @@
     display: flex;
     flex-direction: column;
     row-gap: 24px;
+    margin-bottom: 120px;
     @include onTablet {
       grid-column: span 3;
     }
     @include onDesktop {
-      grid-column: 7 / span 5;
-    }
-    &__label {
-    }
-    &__text {
+      grid-column: 8 / span 5;
     }
   }
 }
-
 .form {
   display: flex;
   flex-direction: column;
   row-gap: 16px;
 
   &__input {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    letter-spacing: 0px;
     width: 100%;
     padding: 16px 20px;
     border-radius: 8px;
-    background: rgba(255, 255, 255, 0.05);
+    background: #f8f8fa;
     border: 1px solid rgba(255, 255, 255, 0.2);
-    color: white;
     outline: none;
+    &::placeholder {
+      color: #7e7e83;
+      transition: color 0.3s ease;
+    }
+    &:hover {
+      border-color: #292929;
+
+      &::placeholder {
+        color: #292929;
+      }
+    }
 
     &--textarea {
-      min-height: 100px;
+      min-height: 148px;
       border-radius: 12px;
+      padding: 16px 20px;
+      resize: none;
+      display: block;
+      width: 100%;
+      box-sizing: border-box;
     }
   }
 
   &__send {
-    display: flex;
-    align-items: center;
-    justify-content: center;
     width: 100%;
-    height: 56px;
-    margin-top: 16px;
-    background-color: white;
-    color: black;
+    margin-top: 24px;
+    margin-bottom: 48px;
+    @include onTablet {
+      margin-bottom: 120px;
+    }
+
+    @include onDesktop {
+      margin-bottom: 182px;
+    }
+  }
+}
+.info {
+  &__label {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.4;
+    letter-spacing: 0px;
+    color: #ffffff;
+    margin-bottom: 8px;
+    opacity: 0.6;
+  }
+  &__text,
+  &__link {
+    color: #ffffff;
     text-decoration: none;
-    border-radius: 28px;
-    font-weight: 700;
-    text-transform: uppercase;
-    transition: 0.3s;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0px;
+    color: #ffffff;
+
+    font-style: normal;
+    display: block;
+
+    transition: color 0.3s ease;
 
     &:hover {
-      background-color: #eee;
+      cursor: pointer;
+      color: #ff5c00;
     }
   }
 }

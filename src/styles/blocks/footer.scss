@@ -2,6 +2,11 @@
   padding: 0;
   margin: 0;
   line-height: 0;
+  position: sticky;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  z-index: -1;
 
   &__img {
     width: 100%;

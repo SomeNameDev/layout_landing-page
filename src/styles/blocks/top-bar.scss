@@ -7,6 +7,7 @@
   &__icons {
     display: flex;
     gap: 32px;
+    align-items: center;
   }
 
   &__logo {
@@ -14,6 +15,7 @@
     img {
       height: 38px;
       width: auto;
+      transition: 0.3s;
       @include onTablet {
         height: 56px;
       }

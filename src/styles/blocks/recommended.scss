@@ -14,6 +14,10 @@
 
   &__product {
     grid-column: 1 / -1;
+    transition: 0.3s;
+    &:hover {
+      transform: scale(1.1);
+    }
 
     @include onTablet {
       grid-column: 2/6;

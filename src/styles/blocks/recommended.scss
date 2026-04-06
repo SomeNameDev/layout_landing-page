@@ -1,6 +1,6 @@
 .recommended {
-  background-color: #1d1d1d;
   padding-bottom: 60px;
+  background-color: #1d1d1d;
 
   &__title {
     margin-top: 92px;
@@ -9,45 +9,54 @@
   }
 
   &__products {
-    @include pageGrid;
+    @include page-grid;
   }
 
   &__product {
+    display: flex;
     grid-column: 1 / -1;
+    flex-direction: column;
+
+    height: 100%;
+
     transition: 0.3s;
     &:hover {
       transform: scale(1.1);
     }
 
-    @include onTablet {
+    @include on-tablet {
       grid-column: 2/6;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       grid-column: span 4;
     }
 
     &-photo {
+      display: block;
+
       width: 100%;
       height: auto;
-      object-fit: cover;
-      display: block;
       margin-bottom: 32px;
+
+      object-fit: cover;
     }
     &-title {
       margin-bottom: 8px;
     }
     &-category {
+      flex-grow: 1;
       margin-bottom: 16px;
     }
 
     &-price {
-      font-family: 'Poppins', sans-serif;
-      font-weight: 700;
+      margin-top: 16px;
+
+      font-family: $font-main;
       font-size: 24px;
+      font-weight: 700;
       line-height: 1.4;
       color: #fff;
-      margin-top: 16px;
     }
   }
 }

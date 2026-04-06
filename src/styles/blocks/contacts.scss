@@ -2,42 +2,50 @@
   margin-bottom: 0;
   padding-bottom: 0;
   &__title {
-    text-align: center;
     margin-bottom: 48px;
+    text-align: center;
   }
 
   &__content {
-    @include pageGrid;
+    @include page-grid;
+
     row-gap: 32px;
-    @include onTablet {
+
+    @include on-tablet {
       align-items: flex-start;
     }
   }
 
   &__form {
     grid-column: 1 / -1;
-    @include onTablet {
+
+    @include on-tablet {
       grid-column: span 3;
     }
-    @include onDesktop {
+
+    @include on-desktop {
       grid-column: span 5;
     }
   }
 
   &__info {
-    grid-column: 1 / -1;
     display: flex;
+    grid-column: 1 / -1;
     flex-direction: column;
     row-gap: 24px;
+
     margin-bottom: 120px;
-    @include onTablet {
+
+    @include on-tablet {
       grid-column: span 3;
     }
-    @include onDesktop {
+
+    @include on-desktop {
       grid-column: 8 / span 5;
     }
   }
 }
+
 .form {
   display: flex;
   flex-direction: column;
@@ -45,16 +53,18 @@
 
   &__input {
     box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 20px;
-    letter-spacing: 0px;
     width: 100%;
     padding: 16px 20px;
-    border-radius: 8px;
-    background: #f8f8fa;
     border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+
+    font-family: $font-main;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+
+    background: #f8f8fa;
     outline: none;
     &::placeholder {
       color: #7e7e83;
@@ -69,13 +79,15 @@
     }
 
     &--textarea {
-      min-height: 148px;
-      border-radius: 12px;
-      padding: 16px 20px;
       resize: none;
+
       display: block;
-      width: 100%;
+
       box-sizing: border-box;
+      width: 100%;
+      min-height: 148px;
+      padding: 16px 20px;
+      border-radius: 12px;
     }
   }
 
@@ -83,39 +95,42 @@
     width: 100%;
     margin-top: 24px;
     margin-bottom: 48px;
-    @include onTablet {
+
+    @include on-tablet {
       margin-bottom: 120px;
     }
 
-    @include onDesktop {
+    @include on-desktop {
       margin-bottom: 182px;
     }
   }
 }
+
 .info {
   &__label {
-    font-family: 'Poppins', sans-serif;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 1.4;
-    letter-spacing: 0px;
-    color: #ffffff;
     margin-bottom: 8px;
+
+    font-family: $font-main;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+    color: #fff;
+    letter-spacing: 0;
+
     opacity: 0.6;
   }
   &__text,
   &__link {
-    color: #ffffff;
-    text-decoration: none;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 500;
-    font-size: 16px;
-    line-height: 1.4;
-    letter-spacing: 0px;
-    color: #ffffff;
-
-    font-style: normal;
     display: block;
+
+    font-family: $font-main;
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    line-height: 1.4;
+    color: #fff;
+    text-decoration: none;
+    letter-spacing: 0;
 
     transition: color 0.3s ease;
 

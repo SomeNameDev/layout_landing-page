@@ -13,12 +13,14 @@
   &__logo {
     display: flex;
     img {
-      height: 38px;
       width: auto;
+      height: 38px;
       transition: 0.3s;
-      @include onTablet {
+
+      @include on-tablet {
         height: 56px;
       }
+
       @include hover(transform, scale(1.2));
     }
   }

@@ -1,7 +1,18 @@
 .header {
-  background-image: url('../images/header-bg-mobile.png');
+  height: 100vh;
   background-position: center;
   background-size: cover;
+  background-repeat: no-repeat;
+
+  background-image: url('../images/header-bg-mobile.png');
+
+  @include on-tablet {
+    background-image: url('../images/header-bg-tablet.png');
+  }
+
+  @include on-desktop {
+    background-image: url('../images/header-bg-desktop.png');
+  }
 
   &__content {
     display: flex;

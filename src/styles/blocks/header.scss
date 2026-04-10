@@ -3,7 +3,7 @@
 
   background-image: url('../images/header-bg-mobile.png');
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
   background-size: cover;
 
   @include on-tablet {
